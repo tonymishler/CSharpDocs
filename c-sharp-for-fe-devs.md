@@ -62,8 +62,7 @@ The initial state of the generated application code should be as follows.
 
 ``` Console.WriteLine("Hello, World!"); ```
 
-This line is executed with a Top Level Statment. A top-level statement is a new feature introduced in C# 9.0 that allows you to write code outside of a [method](#functions-and-methods) or [class](#classes-and-objects)
- or class.  
+This line is executed with a Top Level Statment. A top-level statement is a new feature introduced in C# 9.0 that allows you to write code outside of a [method](#functions-and-methods) or [class](#classes-and-objects).
 
 #### Syntax and Data Types
 C# has a rich set of built-in data types, including integers, floating-point numbers, characters, strings, booleans, and more. C# also has support for user-defined data types through the use of classes and structures. C# syntax is similar to other C-style languages, with semicolons used to terminate statements and curly braces used to group statements into blocks.
