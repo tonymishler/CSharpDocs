@@ -24,11 +24,18 @@
    - [Array reduce](#array-reduce)
    - [Destructuring](#destructuring)
 
-5. [Tooling and Debugging](#5-ps-projects-tooling-and-debugging)
+5. [Project Structure](#5-project-structure) TODO
+    - Anatomy of a c# project
+        - Solutions
+        - Projects
+        - References
+        - Nuget packages
+
+6. [Tooling and Debugging](#6-ps-projects-tooling-and-debugging)
     - [VS code](#vs-code)
     - [Rider](#rider)
 
-6. [Additional Resources](#6-additional-resources)
+7. [Additional Resources](#6-additional-resources)
     - [.NET documentation](#net-documentation)
     - [Replit](#replit)
 
@@ -54,7 +61,7 @@ namespace ConsoleTest
         //defines the entry point for the application
         static void Main(string[] args)
         {
-            //writes everybody's favorite greeting to the console
+            //writes everybody's favorite greeting to the console, using System.Console
             Console.WriteLine("Hello, World!");
         }
     }
@@ -81,18 +88,21 @@ C# provides a range of control structures for looping and making decisions in co
 
 
 ```csharp
+
+//defining a variable using an explicit type
+int count = 0;
+
+//defining a variable using type inference
+var otherCount = 0;
+
+//defining a constant variable
+const int max = 10;
+
 // For loop
 for (int i = 0; i < 10; i++)
 {
     Console.WriteLine(i);
 }
-
-//defining a variable using type inference
-var count = 0;
-
-//defining a constant variable
-const int max = 10;
-
 // While loop
 while (count < max)
 {
@@ -160,7 +170,7 @@ class Person
 {
     //property
     public string Name { get; set; }
-    //preoprty
+    //property
     public int Age { get; set; }
 
     //method
@@ -178,22 +188,15 @@ john.SayHello(); // Output: Hello, my name is John and I am 30 years old.
 ```
 
 
-#### Functions and Methods
-Functions and methods are a fundamental part of C# programming. A function is a standalone piece of code that performs a specific task and returns a value. A method is similar to a function but is associated with an object or class. C# supports both named and anonymous functions and methods.
+#### Methods
+Methods are a fundamental part of C# programming. A function is a standalone piece of code that performs a specific task and returns a value. A method is similar to a function but is associated with an object or class. 
 
 ```csharp
-// Function with return value
-int Add(int x, int y)
-{
-    return x + y;
-}
 
-int result = Add(3, 5);
-Console.WriteLine(result); // Output: 8
-
-// Method with parameters and return value
 class Calculator
 {
+    
+    // Method with parameters and return value
     public int Add(int x, int y)
     {
         return x + y;
@@ -272,10 +275,27 @@ myCar.Drive();
 
 #### Interfaces with C#
 
-In object oriented programming, an interface is a construct that is used to specify the methods and properties a class must contain. Think of this as a contract that specifies a minimum set of data and behavior a class must be able to satisfy. This is useful for writing reusable code leveraging a technique in object oriented programming 
+In object oriented programming, an interface is a construct that is used to specify the methods and properties a class must contain. Think of this as a contract that specifies a minimum set of data and behavior a class must be able to satisfy. This is useful for writing reusable code leveraging [polymorphism](#polymorphism). 
 #### Polymorphism
 
-Polymorphism is the practice of being able to use some code intended for another type, so long as the type you are using it with shares a class inheritence or implements the same interface. It's not immediately obvious from the definition why this might be useful so let's take a look at an example that will both simplify our code design and maximize code reuse: 
+Polymorphism is the practice of writing a single piece of code that can be used by objects of different types, such that the types have a *polymorphic* relationship. A polymorphic relationship is a relationship between two classes that are related to each other through inheritance, or a relationship between a class and an interface that it implements.
+
+Consider the above examples of `Vehicle` and `Car`. We could introduce a third object type called a `RepairShop` that has a method called `RepairVehicle()` that takes a `Vehicle` object as a parameter. The `RepairVehicle()` method could then be used to repair any type of vehicle, regardless of whether it is a `Car` or a `Truck`. This is an example of polymorphism, where the `RepairVehicle()` method can be used with objects of different types, but still have a polymorphic relationship with the `Vehicle` class.
+
+```csharp
+public class RepairShop
+{
+    public void RepairVehicle(Vehicle vehicle)
+    {
+        Console.WriteLine($"The {vehicle.Brand} {vehicle.Model} has been repaired.");
+    }
+}
+
+// Example usage
+RepairShop myShop = new RepairShop();
+myShop.RepairVehicle(myCar);
+```
+
 
 ---
 ### 3. Building web applications with ASP.Net 
@@ -400,7 +420,11 @@ Console.WriteLine($"{name} {age}"); // Output: John 30
 ```
 
 ---
-### 5. PS projects, Tooling and Debugging
+### 5. Project Structure
+
+#### Projects and Solutions
+___
+### 6. PS projects, Tooling and Debugging
 
 #### VS Code
 
