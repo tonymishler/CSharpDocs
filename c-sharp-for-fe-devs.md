@@ -2,35 +2,39 @@
 
 ## Topics
 
-1. C# Basics
-   - Creating you first console application 
-   - Control structures (loops and conditional statements)
+# Introduction to C# Backend Programming for Frontend TypeScript/React Programmers
 
-2. Object-Oriented Programming (OOP)
-   - Classes and objects
-   - Functions and methods
-   - Encapsulation
-   - Inheritance
-   - Interfaces
-   - Polymorphism (wip)
+## Topics
 
-3. Building Application with ASP.NET 
-   - Overview of ASP.NET 
-   - Creating a simple web application using ASP.NET Core
-   - Routing, controllers, and views
+1. [C# Basics](#1-c-basics)
+   - [Creating you first console application](#creating-your-first-console-applicaiton)
+   - [Control structures (loops and conditional statements)](#control-structures-loops-and-conditional-statements)
 
-4. C# Equivalents of Common TypeScript Operations
-   - Array map
-   - Array reduce
-   - Destructuring
+2. [Object-Oriented Programming (OOP)](#2-object-oriented-programming-oop)
+   - [Classes and objects](#classes-and-objects)
+   - [Functions and methods](#functions-and-methods)
+   - [Encapsulation with C#](#encapsulation-with-c)
+   - [Inheritance with C#](#inheritance-with-c)
+   - [Interfaces with C#](#interfaces-with-c)
+   - [Polymorphism](#polymorphism)
 
-5. Tooling and Debugging
-    - VS code
-    - Rider
+3. [Building Application with ASP.NET](#3-building-web-applications-with-aspnet)
+   - [Overview of ASP.NET](#creating-your-first-web-project)
+   - [Creating a simple web application using ASP.NET Core](#creating-your-first-web-project)
+   - [Routing, controllers, and views](#controllers-and-routing)
 
-6. Additional Resources
-    - .net documentation
-    - replit
+4. [C# Equivalents of Common TypeScript Operations](#4-c-equivalents-of-typescript-operations)
+   - [Array map](#array-map)
+   - [Array reduce](#array-reduce)
+   - [Destructuring](#destructuring)
+
+5. [Tooling and Debugging](#5-ps-projects-tooling-and-debugging)
+    - [VS code](#vs-code)
+    - [Rider](#rider)
+
+6. [Additional Resources](#6-additional-resources)
+    - [.NET documentation](#net-documentation)
+    - [Replit](#replit)
 
 ### Prerequisites      
 
@@ -65,6 +69,7 @@ The initial state of the generated application code should be as follows.
 ``` Console.WriteLine("Hello, World!"); ```
 
 This line is executed with a Top Level Statment. A top-level statement is a new feature introduced in C# 9.0 that allows you to write code outside of a [method](#functions-and-methods) or [class](#classes-and-objects).
+
 
 #### Syntax and Data Types
 C# has a rich set of built-in data types, including integers, floating-point numbers, characters, strings, booleans, and more. C# also has support for user-defined data types through the use of classes and structures. C# syntax is similar to other C-style languages, with semicolons used to terminate statements and curly braces used to group statements into blocks.
@@ -107,7 +112,7 @@ else
 
 ```
 
-
+---
 
 ### 2. Object Oriented Principles 
 
@@ -239,6 +244,7 @@ In object oriented programming, an interface is a construct that is used to spec
 
 Polymorphism is the practice of being able to use some code intended for another type, so long as the type you are using it with shares a class inheritence or implements the same interface. It's not immediately obvious from the definition why this might be useful so let's take a look at an example that will both simplify our code design and maximize code reuse: 
 
+---
 ### 3. Building web applications with ASP.Net 
 
 ASP.NET is a popular framework for building web applications using C#. It provides a wide range of features and tools to help you create modern, high-performance, and secure web applications. 
@@ -283,6 +289,7 @@ That's it! You now have a running .NET Core Web API that you can test with an HT
 TODO: Blurb on controllers and routing with link to the appropriate ms documentation 
 
 
+---
 ### 4. C# Equivalents of TypeScript Operations
 
 C# provides a wide range of tools and libraries that are similar to those found in TypeScript. For example, C# has a built-in method for mapping arrays, which is similar to the `map` method in TypeScript. Similarly, C# provides a built-in method for reducing arrays, which is similar to the `reduce` method in TypeScript. Finally, C# also provides support for destructuring, which allows you to extract properties from objects and store them in variables. 
@@ -359,6 +366,7 @@ var (name, age) = person;
 Console.WriteLine($"{name} {age}"); // Output: John 30
 ```
 
+---
 ### 5. PS projects, Tooling and Debugging
 
 #### VS Code
