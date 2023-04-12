@@ -5,13 +5,14 @@
 1. C# Basics
    - Creating you first console application 
    - Control structures (loops and conditional statements)
-   - Functions and methods
-   - Classes and objects
 
 2. Object-Oriented Programming (OOP)
+   - Classes and objects
+   - Functions and methods
    - Encapsulation
    - Inheritance
-   - Polymorphism (to do)
+   - Interfaces
+   - Polymorphism (wip)
 
 3. Building Application with ASP.NET 
    - Overview of ASP.NET 
@@ -26,6 +27,7 @@
 5. Tooling and Debugging
     - VS code
     - Rider
+
 6. Additional Resources
     - .net documentation
     - replit
@@ -106,15 +108,24 @@ else
 ```
 
 
+
+### 2. Object Oriented Principles 
+
+Object-Oriented Programming (OOP) is a programming paradigm that is used to organize code and data into reusable components.  
+
+
 #### Classes and Objects
 Classes and objects are the building blocks of C# programming. A class is a blueprint for creating objects that share common properties and methods. Objects are instances of a class that contain data and can perform actions. C# supports inheritance, allowing you to create new classes based on existing classes, and polymorphism, which allows you to use a single interface to represent multiple different classes.
 
 ```csharp
 class Person
 {
+    //property
     public string Name { get; set; }
+    //preoprty
     public int Age { get; set; }
 
+    //method
     public void SayHello()
     {
         Console.WriteLine("Hello, my name is " + Name + " and I am " + Age + " years old.");
@@ -156,13 +167,6 @@ int result = calc.Add(3, 5);
 Console.WriteLine(result); // Output: 8
 ```
 
-
-These are just brief overviews of each topic. To learn more about C# programming, it's important to dive deeper into each of these areas and practice writing code using them.
-
-### 2. Princples of Object-Oriented Programming (OOP)
-
-Object-Oriented Programming (OOP) is a programming paradigm that is used to organize code and data into reusable components.  
-
 #### Encapsulation with C#
 
 Encapsulation is a fundamental concept in object-oriented programming that allows the hiding of the internal details of an object and restricting direct access to its data and methods from outside the object. In C#, encapsulation is achieved through the use of access modifiers.
@@ -178,9 +182,9 @@ There are four types of access modifiers in C#:
 
 Inheritance is a fundamental concept in object-oriented programming that allows a new class to be based on an existing class, inheriting its properties, methods, and other members. In C#, inheritance is achieved through the use of the `:` symbol followed by the name of the base class.
 
-For example, consider a base class `Vehicle` with properties and methods common to all vehicles, such as `NumberOfWheels`, `MaxSpeed`, and `Drive()`. We can create a derived class `Car` that inherits from `Vehicle` and adds its own properties and methods, such as `Brand`, `Model`, and `Accelerate()`. The `Car` class can also override or extend the behavior of the `Vehicle` class through polymorphism.
+For example, consider a base class `Vehicle` with properties and methods common to all vehicles, such as `NumberOfWheels`, `MaxSpeed`, and `Drive()`. We can create a derived class `Car` that inherits from `Vehicle` and adds its own properties and methods, such as `Brand`, `Model`, and `Accelerate()`. 
 
-Inheritance allows for code reuse and the ability to create specialized classes that inherit from a more general base class. Derived classes can also override or extend the behavior of the base class through polymorphism.
+Inheritance allows for code reuse and the ability to create specialized classes that inherit from a more general base class. Derived classes can also override or extend the behavior of the base class through [polymorphism](#polymorphism).
 
 
 ```csharp
@@ -227,9 +231,13 @@ myCar.Accelerate();
 myCar.Drive();
 
 ```
+
+#### Interfaces with C#
+
+In object oriented programming, an interface is a construct that is used to specify the methods and properties a class must contain. Think of this as a contract that specifies a minimum set of data and behavior a class must be able to satisfy. This is useful for writing reusable code leveraging a technique in object oriented programming 
 #### Polymorphism
 
-TODO
+Polymorphism is the practice of being able to use some code intended for another type, so long as the type you are using it with shares a class inheritence or implements the same interface. It's not immediately obvious from the definition why this might be useful so let's take a look at an example that will both simplify our code design and maximize code reuse: 
 
 ### 3. Building web applications with ASP.Net 
 
@@ -272,7 +280,7 @@ That's it! You now have a running .NET Core Web API that you can test with an HT
 
 #### Controllers and Routing
 
-Blurb on controllers and routing with link to the appropriate ms documentation 
+TODO: Blurb on controllers and routing with link to the appropriate ms documentation 
 
 
 ### 4. C# Equivalents of TypeScript Operations
@@ -359,4 +367,4 @@ VS code is the most popular cross platform tool for writing and debugging .net p
 
 #### Rider
 
-Jetbrains Rider is another very solid option for working on .net projects. While not a free tool, it provides a more traditional Integratred Development Environment (IDE) experience for .net application development. 
+Jetbrains Rider is another solid option for working on .net projects. While not a free tool, it provides a more traditional Integratred Development Environment (IDE) experience for .net application development. 
