@@ -10,7 +10,7 @@
    - [Creating you first console application](#creating-your-first-console-applicaiton)
    - [Control structures (loops and conditional statements)](#control-structures-loops-and-conditional-statements)
 
-2. [Object-Oriented Programming (OOP)](#2-object-oriented-programming-oop)
+2. [Object-Oriented Principles](#2-object-oriented-principles)
    - [Classes and objects](#classes-and-objects)
    - [Functions and methods](#functions-and-methods)
    - [Encapsulation with C#](#encapsulation-with-c)
