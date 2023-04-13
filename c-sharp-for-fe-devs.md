@@ -126,7 +126,7 @@ else
 
 ```
 
-#### Creating your first console applicaiton
+#### Creating your first console application
 
  Let's create a simple console application and see how some of the core C# concepts are impelemented.
 
@@ -190,7 +190,40 @@ john.SayHello(); // Output: Hello, my name is John and I am 30 years old.
 
 ```
 
+### Class Constructors
+Constructors are your entry point to the class. They are called anytime you try to create a object with the `new` operator. For example, it is called when you write `new Person()`
 
+Constructors can take parameters which allow you to assign default values or assign parameters to your variables in your class. If you don't have any parameters to send it, like in the case of `Person` above, you don't need to manually create it. These are called `Parameterless Constructors`
+
+Constructors are very powerful, and have a lot going on. It is recommended you take a look at the Microsoft documentation for more information: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors
+
+```csharp
+class Person
+{
+	//property
+	private string _name;
+	//property
+	private int _age;
+	
+	//constructor
+	public Person(string name, string age)
+	{
+		_name = name;
+		_age = age;
+	}
+
+	//method
+	public void SayHello()
+	{
+		Console.WriteLine("Hello, my name is " + _name + " and I am " + _age + " years old.");
+	}
+}
+
+Person john = new Person("John", 30);
+john.SayHello(); // Output: Hello, my name is John and I am 30 years old.
+```
+
+ 
 #### Methods
 Methods are a fundamental part of C# programming. A function is a standalone piece of code that performs a specific task and returns a value. A method is similar to a function but is associated with an object or class. 
 
@@ -220,6 +253,30 @@ There are three main types of access modifiers in C#:
 -   `public`: allows a member to be accessed from anywhere within the application, including outside the class.
 -   `private`: limits the access of a member to only within the class it is defined.
 -   `protected`: allows access to the member within the class and derived classes.
+
+```csharp
+class Person
+{
+	//property
+	private string _name;
+	
+	//constructor
+	public Person(string name, string age)
+	{
+		Name = name;
+	}
+	
+	//method
+	public void SayHello()
+	{
+		//This method can access these private variables since it is within the class the variables are defined in
+		Console.WriteLine("Hello, my name is " + _name + " and I am " + _age + " years old.");
+	}
+}
+
+Person john = new Person("John", 30);
+john._name = "Jeff" // This will fail to compile since `_name` is private
+```
 
 #### Inheritance with C#
 
