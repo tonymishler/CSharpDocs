@@ -404,6 +404,9 @@ var sum = numbers.Aggregate(0, (acc, num) => acc + num);
 Console.WriteLine(sum); // Output: 10
 ```
 
+**Linq** is a powerful tool and can often behave in unexpected ways, particularly if used in conjunction with [Entity Framework](https://learn.microsoft.com/en-us/ef/) for database access (which is outside the scope of this document). For more information on Linq, see the [Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/).
+
+The use of **Collections** in C# is a deep and involved topic, the full extent of which is also beyond the scope of this document. For more information on collections, see the [Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/collections).
 
 ### Destructuring
 In TypeScript, you can use destructuring to extract properties from objects and store them in variables:
@@ -435,3 +438,6 @@ VS code is the most popular cross platform tool for writing and debugging .net p
 #### Rider
 
 Jetbrains Rider is another solid option for working on .net projects. While not a free tool, it provides a more traditional Integratred Development Environment (IDE) experience for .net application development. 
+
+#### Misc To Do
+
