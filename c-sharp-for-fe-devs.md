@@ -200,10 +200,10 @@ Constructors are very powerful, and have a lot going on. It is recommended you t
 ```csharp
 class Person
 {
-    //property
-    private string _name;
-    //property
-    private int _age;
+	//property
+	private string _name;
+	//property
+	private int _age;
 	
 	//constructor
 	public Person(string name, string age)
@@ -213,10 +213,10 @@ class Person
 	}
 
     //method
-    public void SayHello()
-    {
-        Console.WriteLine("Hello, my name is " + _name + " and I am " + _age + " years old.");
-    }
+	public void SayHello()
+	{
+		Console.WriteLine("Hello, my name is " + _name + " and I am " + _age + " years old.");
+	}
 }
 
 Person john = new Person("John", 30);
@@ -257,8 +257,8 @@ There are three main types of access modifiers in C#:
 ```csharp
 class Person
 {
-    //property
-    private string _name;
+	//property
+	private string _name;
 	
 	//constructor
 	public Person(string name, string age)
@@ -267,11 +267,11 @@ class Person
 	}
 	
 	//method
-    public void SayHello()
-    {
+	public void SayHello()
+	{
 		//This method can access these private variables since it is within the class the variables are defined in
-        Console.WriteLine("Hello, my name is " + _name + " and I am " + _age + " years old.");
-    }
+		Console.WriteLine("Hello, my name is " + _name + " and I am " + _age + " years old.");
+	}
 }
 
 Person john = new Person("John", 30);
