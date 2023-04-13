@@ -552,9 +552,9 @@ A C# project typically contains one or more source code files (written in C#) th
 
 - **Properties folder**: This folder may contain files such as AssemblyInfo.cs, which contains information about the assembly, such as version number and copyright information.
 
-**Packages folder**: This folder contains the NuGet packages that the project depends on.
+- **Packages folder**: This folder contains the NuGet packages that the project depends on.
 
-**References**: This folder contains references to external libraries that the project depends on.
+- **References**: This folder contains references to external libraries that the project depends on.
 
 A given C# project won't necessarily contain all of these files. Refer to the example projects from this documentation to see what these files look like in practice.
 
