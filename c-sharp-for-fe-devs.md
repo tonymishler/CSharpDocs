@@ -399,6 +399,8 @@ static void Main(string[] args)
 }
 ```
 
+Note the use of the `Abstract` modifier on the Pacel class. This exists to indicate that the Parcel class shouldn't and can't be instanted directly. It is only meant to be used as a base class for other classes, to define common Methods and or Properties that are shared by all of its subclasses.
+
 ---
 ### 3. Building web applications with ASP.Net 
 
