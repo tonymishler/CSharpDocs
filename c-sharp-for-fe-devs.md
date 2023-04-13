@@ -298,6 +298,106 @@ RepairShop myShop = new RepairShop();
 myShop.RepairVehicle(myCar);
 ```
 
+#### Putting it all together
+
+In our final example we will model a package delivery system that allows for the sending of letters and packages via different delivery services. We will use the concepts of inheritance, interfaces, and polymorphism to create a system that is flexible and extensible.
+
+```csharp
+// Define the IPackageSender interface
+public interface IPackageSender
+{
+    void Send(Parcel parcel);
+}
+
+// Define the Parcel base class
+public abstract class Parcel
+{
+    public string SenderName { get; set; }
+    public string SenderAddress { get; set; }
+    public string ReceiverName { get; set; }
+    public string ReceiverAddress { get; set; }
+}
+
+// Define the Letter subclass of Parcel
+public class Letter : Parcel
+{
+    public string Content { get; set; }
+}
+
+// Define the Package subclass of Parcel
+public class Package : Parcel
+{
+    public double Weight { get; set; }
+}
+
+// Implement the IPackageSender interface for USPS
+public class Usps : IPackageSender
+{
+    public void Send(Parcel parcel)
+    {
+        Console.WriteLine("Sending parcel via USPS...");
+        Console.WriteLine($"Sender: {parcel.SenderName}, Address: {parcel.SenderAddress}");
+        Console.WriteLine($"Receiver: {parcel.ReceiverName}, Address: {parcel.ReceiverAddress}");
+        if (parcel is Letter)
+        {
+            Console.WriteLine($"Content: {(parcel as Letter).Content}");
+        }
+        else if (parcel is Package)
+        {
+            Console.WriteLine($"Weight: {(parcel as Package).Weight}");
+        }
+        Console.WriteLine("Parcel sent via USPS.");
+    }
+}
+
+// Implement the IPackageSender interface for UPS
+public class Ups : IPackageSender
+{
+    public void Send(Parcel parcel)
+    {
+        Console.WriteLine("Sending parcel via UPS...");
+        Console.WriteLine($"Sender: {parcel.SenderName}, Address: {parcel.SenderAddress}");
+        Console.WriteLine($"Receiver: {parcel.ReceiverName}, Address: {parcel.ReceiverAddress}");
+        if (parcel is Letter)
+        {
+            Console.WriteLine($"Content: {(parcel as Letter).Content}");
+        }
+        else if (parcel is Package)
+        {
+            Console.WriteLine($"Weight: {(parcel as Package).Weight}");
+        }
+        Console.WriteLine("Parcel sent via UPS.");
+    }
+}
+
+// Example usage
+static void Main(string[] args)
+{
+    // Sending a letter via USPS
+    var letter = new Letter()
+    {
+        SenderName = "John Doe",
+        SenderAddress = "123 Main St",
+        ReceiverName = "Jane Doe",
+        ReceiverAddress = "456 Maple Ave",
+        Content = "Hello Jane, how are you?"
+    };
+    var usps = new Usps();
+    usps.Send(letter);
+
+    // Sending a package via UPS
+    var package = new Package()
+    {
+        SenderName = "John Doe",
+        SenderAddress = "123 Main St",
+        ReceiverName = "Jane Doe",
+        ReceiverAddress = "456 Maple Ave",
+        Weight = 2.5
+    };
+    var ups = new Ups();
+    ups.Send(package);
+}
+```
 
 ---
 ### 3. Building web applications with ASP.Net 
