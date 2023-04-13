@@ -370,6 +370,12 @@ public class Ups : IPackageSender
     }
 }
 
+// Define the SendPackage method that takes an IPackageSender as a parameter
+public static void SendPackage(IPackageSender packageSender, Parcel parcel)
+{
+    packageSender.Send(parcel);
+}
+
 // Example usage
 static void Main(string[] args)
 {
@@ -383,7 +389,7 @@ static void Main(string[] args)
         Content = "Hello Jane, how are you?"
     };
     var usps = new Usps();
-    usps.Send(letter);
+    SendPackage(usps, letter);
 
     // Sending a package via UPS
     var package = new Package()
@@ -395,8 +401,9 @@ static void Main(string[] args)
         Weight = 2.5
     };
     var ups = new Ups();
-    ups.Send(package);
+    SendPackage(ups, package);
 }
+
 ```
 
 Note the use of the `Abstract` modifier on the Pacel class. This exists to indicate that the Parcel class shouldn't and can't be instanted directly. It is only meant to be used as a base class for other classes, to define common Methods and or Properties that are shared by all of its subclasses.
