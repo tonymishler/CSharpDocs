@@ -3,12 +3,12 @@
 ## Topics
 
 1. [C# Basics](#1-c-basics)
-   - [Creating you first console application](#creating-your-first-console-applicaiton)
+   - [Creating you first console application](#creating-your-first-console-application)
    - [Control structures (loops and conditional statements)](#control-structures-loops-and-conditional-statements)
 
 2. [Object-Oriented Principles](#2-object-oriented-principles)
    - [Classes and objects](#classes-and-objects)
-   - [Constructors](#constructors) TODO
+   - [Constructors](#class-constructors)
    - [Methods](#methods)
    - [Properties](#properties) 
    - [Encapsulation with C#](#encapsulation-with-c)
@@ -195,7 +195,7 @@ Constructors are your entry point to the class. They are called anytime you try 
 
 Constructors can take parameters which allow you to assign default values or assign parameters to your variables in your class. If you don't have any parameters to send it, like in the case of `Person` above, you don't need to manually create it. These are called `Parameterless Constructors`
 
-Constructors are very powerful, and have a lot going on. It is recommended you take a look at the Microsoft documentation for more information: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors
+Constructors are very powerful, and have a lot going on. It is recommended you take a look at the [Microsoft documentation](https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/constructors) for more information. 
 
 ```csharp
 class Person
