@@ -8,11 +8,14 @@
 
 2. [Object-Oriented Principles](#2-object-oriented-principles)
    - [Classes and objects](#classes-and-objects)
-   - [Functions and methods](#functions-and-methods)
+   - [Constructors](#constructors) TODO
+   - [Methods](#methods)
+   - [Properties](#properties) 
    - [Encapsulation with C#](#encapsulation-with-c)
    - [Inheritance with C#](#inheritance-with-c)
    - [Interfaces with C#](#interfaces-with-c)
    - [Polymorphism](#polymorphism)
+   - [Records](#records) TODO
 
 3. [Building Application with ASP.NET](#3-building-web-applications-with-aspnet)
    - [Overview of ASP.NET](#creating-your-first-web-project)
@@ -148,7 +151,7 @@ The initial state of the generated application code should be as follows.
 
 ``` Console.WriteLine("Hello, World!"); ```
 
-This line is executed with a Top Level Statment. A top-level statement is a new feature introduced in C# 9.0 that allows you to write code outside of a [method](#functions-and-methods) or [class](#classes-and-objects).
+This line is executed with a Top Level Statment. A top-level statement is a new feature introduced in C# 9.0 that allows you to write code outside of a [method](#methods) or [class](#classes-and-objects).
 
 
 #### Exercise 
@@ -163,7 +166,7 @@ Object-Oriented Programming (OOP) is a programming paradigm that is used to orga
 
 
 #### Classes and Objects
-Classes and objects are the building blocks of C# programming. A class is a blueprint for creating objects that share common properties and methods. Objects are instances of a class that contain data and can perform actions. C# supports inheritance, allowing you to create new classes based on existing classes, and polymorphism, which allows you to use a single interface to represent multiple different classes.
+Classes and objects are the building blocks of C# programming. A class is a blueprint for creating objects that share common properties and methods. Objects are instances of a class that contain data and can perform actions. 
 
 ```csharp
 class Person
@@ -212,12 +215,11 @@ Console.WriteLine(result); // Output: 8
 
 Encapsulation is a fundamental concept in object-oriented programming that allows the hiding of the internal details of an object and restricting direct access to its data and methods from outside the object. In C#, encapsulation is achieved through the use of access modifiers.
 
-There are four types of access modifiers in C#:
+There are three main types of access modifiers in C#:
 
 -   `public`: allows a member to be accessed from anywhere within the application, including outside the class.
 -   `private`: limits the access of a member to only within the class it is defined.
 -   `protected`: allows access to the member within the class and derived classes.
--   `internal`: limits access to only within the current assembly.
 
 #### Inheritance with C#
 
@@ -329,7 +331,7 @@ ASP.NET is a popular framework for building web applications using C#. It provid
 
     This will start the web API on `http://localhost:5065`.
 
-7.  Open your HTTP client, such as Postman or Thunder Client, and create a new request with the URL `http://localhost:5065/weatherforecast`.
+7.  Open your HTTP client, such as Postman or Thunder Client, and create a new request with the URL `http://localhost:5065/weatherforecast`. Since this is a GET request, you can actually hit the URL directly in your browser to test it out. For any POST or PUT requests, you will need to use an HTTP client.
 
 8.  Send the request to the server by clicking the Send button.
 
